@@ -129,6 +129,7 @@ footer ul li {
 .stock-symbol{
   /* margin: 20px 10%; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
