@@ -25,7 +25,14 @@ form.addEventListener('submit', (e) => {
             //daily current prices
             const dailyCurrentPrice = Number(Object.values(dailyPrices)[3])
             // console.log(dailyCurrentPrice)
-            getProfitLoss(dailyCurrentPrice)
+
+            if (dailyCurrentPrice) {
+                document.querySelector(".background").style.backgroundImage = "url('/w.webp')";
+                setTimeout(() => {
+                    getProfitLoss(dailyCurrentPrice)
+                }, 3000)
+            }
+
         })
 
 })
@@ -52,7 +59,7 @@ function getProfitLoss(price) {
 
             if (lossPerce > 50) {
                 document.querySelector(".background").style.backgroundImage = "url('/ll.webp')";
-            }else if(lossPerce <= 50){
+            } else if (lossPerce <= 50) {
                 document.querySelector(".background").style.backgroundImage = "url('/l.webp')";
             }
             message(`You lost ${lossPerce}%, and Your total loss is ₹${totalLoss}`)
@@ -65,7 +72,7 @@ function getProfitLoss(price) {
 
             if (profitPer > 50) {
                 document.querySelector(".background").style.backgroundImage = "url('/ppp.webp')";
-            }else if(profitPer <= 50){
+            } else if (profitPer <= 50) {
                 document.querySelector(".background").style.backgroundImage = "url('/lp.webp')";
             }
 
