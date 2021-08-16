@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
             const dailyPrices = Object.values(Ob)[0]
             //daily current prices
             const dailyCurrentPrice = Number(Object.values(dailyPrices)[3])
-            // console.log(dailyCurrentPrice)
+             console.log(dailyCurrentPrice)
 
             if (dailyCurrentPrice) {
                 document.querySelector(".background").style.backgroundImage = "url('/w.webp')";
