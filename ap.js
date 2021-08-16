@@ -50,6 +50,11 @@ function getProfitLoss(price) {
             //loss in percentage
             const lossPerce = (((purchasePriceValue - currentPrice) * 100) / purchasePriceValue).toFixed(2);
 
+            if (lossPerce > 50) {
+                document.querySelector(".background").style.backgroundImage = "url('/ll.webp')";
+            }else if(lossPerce <= 50){
+                document.querySelector(".background").style.backgroundImage = "url('/l.webp')";
+            }
             message(`You lost ${lossPerce}%, and Your total loss is ₹${totalLoss}`)
 
         } else {
@@ -58,6 +63,11 @@ function getProfitLoss(price) {
             //profit in percentage
             const profitPer = (((currentPrice - purchasePriceValue) * 100) / purchasePriceValue).toFixed(2);
 
+            if (profitPer > 50) {
+                document.querySelector(".background").style.backgroundImage = "url('/ppp.webp')";
+            }else if(profitPer <= 50){
+                document.querySelector(".background").style.backgroundImage = "url('/lp.webp')";
+            }
 
             message(`You gain ${profitPer}%, and Your total profit is ₹${totalProfit}`)
         }
