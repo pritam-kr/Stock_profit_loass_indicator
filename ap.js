@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
                 document.querySelector(".background").style.backgroundImage = "url('/w.webp')";
                 setTimeout(() => {
                     getProfitLoss(dailyCurrentPrice)
-                }, 100)
+                }, 3000)
             }
 
         })
